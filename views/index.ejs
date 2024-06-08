@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+</head>
+<body>
+    <style>
+        body{
+           
+    height: 100%;
+    --r: 56px;
+    --c1: #fff 99%, #0000 101%;
+    --c2: rgba(240, 248, 255, .438) 99%, #0000 101%;
+    --s: calc(var(--r)* .866);
+    --g0: radial-gradient(var(--r), var(--c1));
+    --g1: radial-gradient(var(--r), var(--c2));
+    --f: radial-gradient(var(--r) at calc(100% + var(--s)) 50%, var(--c1));
+    --p: radial-gradient(var(--r) at 100% 50%, var(--c2));
+    background: var(--f) 0 calc(-5* var(--r) / 2), var(--f) calc(-2* var(--s)) calc(var(--r) / 2), var(--p) 0 calc(-2* var(--r)), var(--g0) var(--s) calc(-5* var(--r) / 2), var(--g1) var(--s) calc(5* var(--r) / 2), radial-gradient(var(--r) at 100% 100%, var(--c1)) 0 calc(-1* var(--r)), radial-gradient(var(--r) at 0% 50%, var(--c1)) 0 calc(-4* var(--r)), var(--g1) calc(-1* var(--s)) calc(-7* var(--r) / 2), var(--g0) calc(-1* var(--s)) calc(-5* var(--r) / 2), var(--p) calc(-2* var(--s)) var(--r), var(--g0) calc(-1* var(--s)) calc(var(--r) / 2), var(--g1) calc(-1* var(--s)) calc(var(--r) / -2), var(--g0) 0 calc(-1* var(--r)), var(--g1) var(--s) calc(var(--r) / -2), var(--g0) var(--s) calc(var(--r) / 2) rgb(240, 248, 255);
+    background-size: calc(4* var(--s)) calc(6* var(--r));
+        }
+
+.container {
+   display: flex;
+}
+
+img{
+    width: 600px;
+}
+
+h2 {
+    text-align: center;
+    color: #45a049;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.right{
+    margin-left: 100px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+input[type="submit"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+input[type="file"] {
+    cursor: pointer;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+    </style>
+    <h1 style="text-align: center;margin-bottom: 50px;">Dynamically Signature Verification and OCR & Digit Recognition </h1>
+    <div class="container">
+    <div class="left">
+        <img src="../assets/logo.png" alt="bg">
+    </div>
+    <div class="right">
+        <h2 >Add Student Form</h2>
+    <form action="/addstudent" method="POST" enctype="multipart/form-data">
+        <label for="username" >StudentName:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="image">Signature-Image:</label><br>
+        <input type="file" id="image" name="image" accept="image/*" required><br><br>
+        
+        <input type="submit" value="Add Student">
+    </form>
+    <!-- <p style="margin-left: 20px;">Already have an account please <a style="text-decoration: none;color: #45a049;font-size: 18px;font-weight: bold;margin-left: 2px;" href="/login">Login</a></p> -->
+</div>
+</div>
+</body>
+</html>
+
+
